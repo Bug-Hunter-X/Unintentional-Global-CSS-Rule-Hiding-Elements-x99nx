@@ -1,0 +1,28 @@
+The solution involves using more specific CSS selectors to target only the intended elements, potentially including ID selectors to make the selection more precise, or creating a separate class for elements that should always be hidden.
+
+Here's an example of a possible solution (using ID selector):
+
+```css
+#my-modal.modal { /* This will target only the modal with ID my-modal*/
+display: none;
+}
+
+.modal {
+  /* Add other styles for the modal class */
+display: block; /* Ensure the modal is visible unless explicitly hidden */
+}
+```
+
+Another example is creating a separate class:
+
+```css
+.always-hidden {
+  display: none;
+}
+
+.modal {
+  /* Add other styles for the modal class */
+display: block;
+}
+```
+Then you can apply class `always-hidden` to the elements that you always want to be hidden.
